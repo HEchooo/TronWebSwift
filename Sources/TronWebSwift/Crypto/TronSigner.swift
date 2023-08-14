@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Secp256k1Swift
+import secp256k1
 
 public struct TronSigner: CustomStringConvertible {
     public var privateKey: Data

@@ -18,8 +18,9 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
          .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.18.0"),
          .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.4.2"),
-         .package(url: "https://github.com/mathwallet/Secp256k1Swift.git", from: "2.0.0"),
-         .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.16.2")
+         .package(url: "https://github.com/GigaBitcoin/secp256k1.swift.git", from: "0.10.0"),
+         .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.16.2"),
+         .package(url: "https://github.com/attaswift/BigInt.git", .upToNextMinor(from: "5.3.0"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -29,8 +30,8 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftProtobuf", package: "swift-protobuf"),
                 "CryptoSwift",
-                .product(name: "Secp256k1Swift", package: "Secp256k1Swift"),
-                .product(name: "BIP32Swift", package: "Secp256k1Swift"),
+                .product(name: "secp256k1", package: "secp256k1.swift"),
+                .product(name: "BigInt", package: "BigInt"),
                 "PromiseKit"
             ]
         ),
