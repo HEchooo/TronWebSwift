@@ -15,7 +15,7 @@ extension TronWeb {
     }
     
     public class WebContract {
-        var contract: TronContract
+        public var contract: TronContract
         var provider : TronWebHttpProvider
         public var transactionOptions: TronTransactionOptions? = nil
         
